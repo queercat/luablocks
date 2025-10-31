@@ -2,8 +2,10 @@
 #define COMMAND_H
 
 struct Command {
-  virtual void Do();
-  virtual void Undo();
+  virtual ~Command() = default;
+
+  virtual void Do() = 0;
+  virtual void Undo() = 0;
 };
 
 #endif

@@ -7,9 +7,8 @@ class InputState {
 public:
   virtual ~InputState() = default;
 
-  virtual void Enter(InputManager &manager) {}
-  virtual void Exit(InputManager &manager) {}
-
+  virtual void Enter(InputManager &manager) = 0;
+  virtual void Exit(InputManager &manager) = 0;
   virtual void HandleClick(InputManager &manager) = 0;
   virtual void HandleUnclick(InputManager &manager) = 0;
   virtual void HandleMove(InputManager &manager) = 0;
